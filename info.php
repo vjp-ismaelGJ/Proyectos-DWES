@@ -7,5 +7,8 @@
     // Memory limit     512M
 
     // $_SERVER['DOCUMENT_ROOT']	C:/xampp/htdocs
+
+    // Control K + Control C para comentar
+    // Control K + Control U para descomentar
 ?>
 
