@@ -24,7 +24,7 @@
 		</tr>
 		<tr>
             <td>Apellidos</td>
-			<td><?= $apellido1. " ".$apellido2 ?></td>
+			<td><?= $apellido1." ".$apellido2 ?></td>
 		</tr>
         <tr>
             <td>Email</td>
