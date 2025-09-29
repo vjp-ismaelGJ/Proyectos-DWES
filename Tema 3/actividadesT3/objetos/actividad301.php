@@ -50,10 +50,7 @@ class Empleado {
 
 }
 
-$empleado = new Empleado();
-$empleado->setNombre("Ismael");
-$empleado->setApellidos("Gil Jiménez");
-$empleado->setSueldo(4440);
+$empleado = new Empleado("Ismael","Gil Jiménez", 4440);
 
 echo $empleado->getNombreCompleto();
 echo " tiene un sueldo de ".$empleado->getSueldo()."€ por lo tanto ";

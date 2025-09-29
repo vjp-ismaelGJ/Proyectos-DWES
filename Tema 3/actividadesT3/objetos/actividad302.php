@@ -11,6 +11,11 @@ class Empleado {
     private $sueldo;
     private array $telefonos = [];
 
+    public function __construct(string $nombre, string $apellidos, float $sueldo) {
+        $this->nombre = $nombre;
+        $this->apellidos = $apellidos;
+        $this->sueldo = $sueldo;
+    }
     
     public function setNombre($nombre) {
         $this->nombre = $nombre;
@@ -45,11 +50,19 @@ class Empleado {
     }
 
     public function anyadirTelefono(int $telefono) : void {
-        $this->telefonos[] = $telefono;
+        $this->telefonos[] = $telefono;  // Añade al final del array un enterro
     }
 
     public function listarTelefonos(): string {
-        return implode(", ",$this->telefonos);
+        if (empty($this->telefonos)) {
+            return "No hay teléfonos";
+        }
+        return implode(", ", $this->telefonos);
+        // $aux = "";
+        // foreach ($this->telefonos as $numero) {
+        //     $aux .= $numero + " \n";
+        // }
+        // return $aux;
     }
 
     public function vaciarTelefonos(): void {
@@ -57,7 +70,7 @@ class Empleado {
     }
 }
 
-$empleado = new Empleado();
+$empleado = new Empleado("Ismael", "Gil Jiménez", 4000);
 $empleado->anyadirTelefono(123456789);
 $empleado->anyadirTelefono(987654321);
 
