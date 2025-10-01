@@ -77,6 +77,16 @@ class Empleado {
 
     public static function toHtml(Empleado $emp): String {
         
+        $html = "<p>Empleado: " . $emp->getNombreCompleto() . " | Sueldo: " . $emp->getSueldo() . "</p>";
+        
+        $html .= "<ol>";
+
+        foreach ($emp->getTelefonos() as $tlfn) {
+            $html .= "<li>$tlfn</li>";
+        }
+        $html .= "</ol>";
+
+        return $html;
     }
 
 }
@@ -88,6 +98,13 @@ $empleado->anyadirTelefono(987654321);
 echo "Antes de vaciar: " . $empleado->listarTelefonos() . "\n";
 
 $empleado->vaciarTelefonos();
-echo "Después de vaciar: '" . $empleado->listarTelefonos() . "'";
+
+echo " |  Después de vaciar: '" . $empleado->listarTelefonos() . "'";
+
+$empleado->anyadirTelefono(123456789);
+$empleado->anyadirTelefono(987654321);
+$empleado->anyadirTelefono(564139771);
+
+echo Empleado::toHtml($empleado);
 
 ?>
