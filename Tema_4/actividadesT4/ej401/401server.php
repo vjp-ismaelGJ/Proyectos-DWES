@@ -16,7 +16,6 @@
         // Prepara un formulario (401post.html) que haga un envío por POST y compruébalo de nuevo.
         // Crea una página (401enlace.html) que tenga un enlace a 401server.php y comprueba el valor de HTTP_REFERER.
 
-
         // Valores $_SERVER
         echo "=== Información del servidor ===\n";
         echo "PHP_SELF: " . $_SERVER["PHP_SELF"] . "\n";

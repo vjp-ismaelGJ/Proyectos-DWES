@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="IsmaelGJ">
+    <title>Actividad 402 de Ismael Gil Jiménez</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <fieldset class="border p-3 rounded mx-auto my-4" style="max-width: 600px;">
+        <legend class="float-none w-auto px-2">Formulario</legend>
+        <form action="402formulario.php" method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nombre y Apellidos</label>
+            <input type="text" class="form-control" id="name" name="nombre" placeholder="Pablo Serrano Martín">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="tucorreo@email.com">
+            <div id="emailHelp" class="form-text">No compartiremos tu email con nadie.</div>
+        </div>
+        <div class="mb-3">
+            <label for="url" class="form-label">URL de la página personal</label>
+            <input type="text" class="form-control" id="url" name="url">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Sexo</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sexo" id="masculino" value="Masculino">
+                <label class="form-check-label" for="masculino">Masculino</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sexo" id="femenino" value="Femenino">
+                <label class="form-check-label" for="femenino">Femenino</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sexo" id="otro" value="Otro">
+                <label class="form-check-label" for="otro">Otro</label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="convivientes" class="form-label">Número de convivientes en el domicilio</label>
+            <input class="form-control" id="convivientes" name="convivientes" type="number">
+        </div>
+        <label class="form-label mb-3">Aficiones</label>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="aficiones[]" value="Futbol" id="futbol">
+            <label class="form-check-label" for="futbol">Fútbol</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="aficiones[]" value="Tenis" id="tenis">
+            <label class="form-check-label" for="tenis">Tenis</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="aficiones[]" value="Baloncesto" id="baloncesto">
+            <label class="form-check-label" for="baloncesto">Baloncesto</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="aficiones[]" value="Correr" id="correr">
+            <label class="form-check-label" for="correr">Correr</label>
+        </div>
+        <div class="mb-3">
+            <label for="menus" class="form-label">Menús favoritos:</label>
+            <select class="form-select" id="menus" name="menus[]" multiple>
+                <option value="paella">Paella</option>
+                <option value="pollo">Arroz con pollo</option>
+                <option value="jamon">Jamón ibérico</option>
+                <option value="sushi">Sushi</option>
+                <option value="macarrones">Macarrones</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="reset" class="btn btn-danger">Borrar</button>
+    </form>     
+    </fieldset>
+</body>
+</html>
